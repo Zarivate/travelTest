@@ -1,28 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
-  name: "counter",
-  initialState: {
-    value: 0,
-  },
-  reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1;
+const intialState = {
+  origin: null,
+  destination: null,
+  travelTimeInfo: null,
+};
+
+export const navSlice = createSlice({
+  name: "nav",
+  intialState,
+  reducer: {
+    setOrigin: (state, action) => {
+      state.origin = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    setDestination: (state, action) => {
+      state.destination = action.payload;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    setTravelTimeInfo: (state, action) => {
+      state.travelTimeInfo = action.payload;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { setOrigin, setDestination, setTravelTimeInfo } =
+  navSlice.actions;
 
-export default counterSlice.reducer;
+export const selectOrigin = (state) => state.nav.origin;
+export const selectDestination = (state) => state.nav.destination;
+export const selectTravelTimeInfo = (state) => state.nav.travelTimeInfo;
+
+export default navSlice.reducer;
