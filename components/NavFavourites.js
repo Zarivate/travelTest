@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { Icon } from "react-native-elements";
+import tw from "twrnc";
 
 const sampleData = [
   {
@@ -28,9 +29,22 @@ const NavFavourites = () => {
     <FlatList
       data={sampleData}
       keyExtractor={(item) => item.id}
-      renderItem={({ item }) => (
-        <TouchableOpacity>
-          <Text>Howdy</Text>
+      ItemSeparatorComponent={() => (
+        <View style={[tw`bg-gray-200`, { height: 0.5 }]} />
+      )}
+      renderItem={({ item: { location, destination, icon } }) => (
+        <TouchableOpacity style={[tw`items-center p-5 flex-row`]}>
+          <Icon
+            style={tw`mr-4 rounded-full bg-gray-300 p-3`}
+            name={icon}
+            type="ionicon"
+            color="white"
+            size={18}
+          />
+          <View>
+            <Text style={tw`font-semibold text-lg`}>{location}</Text>
+            <Text style={tw`text-gray-500`}>{destination}</Text>
+          </View>
         </TouchableOpacity>
       )}
     />
