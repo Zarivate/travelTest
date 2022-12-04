@@ -25,42 +25,7 @@ const HomeScreen = () => {
             uri: "https://links.papareact.com/gzs",
           }}
         />
-
-        <GooglePlacesAutocomplete
-          styles={{
-            container: {
-              flex: 0,
-            },
-            textInput: {
-              fontSize: 18,
-            },
-          }}
-          onPress={(data, details = null) => {
-            dispatch(
-              setOrigin({
-                // Stores object with latitude and longitude of location, stored in Redux
-                location: details.geometry.location,
-                description: data.description,
-              })
-            );
-
-            dispatch(setDestination(null));
-          }}
-          returnKeyType={"search"}
-          fetchDetails={true}
-          enablePoweredByContainer={false}
-          minLength={2}
-          query={{
-            key: GOOGLE_MAPS_APIKEY,
-            language: "en",
-          }}
-          placeholder="Enter starting location"
-          nearbyPlacesAPI="GooglePlacesSearch"
-          debounce={400}
-        />
-
-        <NavOptions />
-        <NavFavourites />
+        <Text>Had to remove just about everything</Text>
       </View>
     </SafeAreaView>
   );
