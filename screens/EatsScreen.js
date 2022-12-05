@@ -22,7 +22,7 @@ const HomeScreen = () => {
             resizeMode: "contain",
           }}
           source={{
-            uri: "https://links.papareact.com/gzs",
+            uri: "https://w1.pngwing.com/pngs/546/859/png-transparent-food-icon-delivery-icon-sushi-pizza-delivery-scooter-courier-food-delivery-text-thumbnail.png",
           }}
         />
         <Text>Had to remove just about everything</Text>

@@ -14,13 +14,13 @@ const sampleData = [
     id: "123",
     icon: "home",
     location: "Home",
-    destination: "Code Street, London, UK",
+    destination: "Please input field",
   },
   {
     id: "456",
     icon: "briefcase",
     location: "Work",
-    destination: "London Eye, London, UK",
+    destination: "Please input field",
   },
 ];
 
