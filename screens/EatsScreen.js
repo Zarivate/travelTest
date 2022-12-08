@@ -18,7 +18,11 @@ const HomeScreen = () => {
       <View>
         <Text>
           <View>
-            <TouchableOpacity></TouchableOpacity>
+            <TouchableOpacity>
+              <View>
+                <Text>Restaurants loading...</Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </Text>
       </View>
