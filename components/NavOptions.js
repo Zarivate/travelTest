@@ -11,7 +11,7 @@ const sampleData = [
     id: "123",
     title: "Get a ride",
     image: "https://links.papareact.com/3pn",
-    screen: "MapScreen",
+    screen: "EatsScreen",
   },
   {
     id: "456",
