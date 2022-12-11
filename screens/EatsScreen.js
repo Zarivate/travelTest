@@ -25,13 +25,37 @@ const HomeScreen = () => {
     {
       id: "123",
       title: "Wcdonalds",
-      image: "https://links.papareact.com/3pn",
+      image: wcdonalds,
       screen: "EatsScreen",
     },
     {
       id: "456",
-      title: "Order food",
-      image: "https://links.papareact.com/28w",
+      title: "exquisite",
+      image: remy,
+      screen: "EatsScreen",
+    },
+    {
+      id: "789",
+      title: "exquisite",
+      image: remy,
+      screen: "EatsScreen",
+    },
+    {
+      id: "101112",
+      title: "godly",
+      image: kingMeat,
+      screen: "EatsScreen",
+    },
+    {
+      id: "131415",
+      title: "fun",
+      image: bigW,
+      screen: "EatsScreen",
+    },
+    {
+      id: "161718",
+      title: "Annette",
+      image: angery,
       screen: "EatsScreen",
     },
   ];
