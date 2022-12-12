@@ -63,12 +63,15 @@ const HomeScreen = () => {
     <SafeAreaView style={tw`bg-white h-full`}>
       <ScrollView>
         <View className="relative">
-          <Image
-            source={{
-              uri: urlFor(imgUrl).url(),
-            }}
-            className="w-full h-56 bg-gray-300 p-4"
-          />
+          {sampleData.map((data) => (
+            <Image
+              source={{
+                uri: urlFor(imgUrl).url(),
+              }}
+              className="w-full h-56 bg-gray-300 p-4"
+            />
+          ))}
+
           <TouchableOpacity
             onPress={navigation.goBack}
             className="absolute top-14 left-5 p-2 bg-gray-100 rounded-full"
@@ -76,6 +79,7 @@ const HomeScreen = () => {
             <ArrowLeftIcon size={20} color="#00CCBB" />
           </TouchableOpacity>
         </View>
+
         <View className="bg-white">
           <View className="px-4 pt-4">
             <Text className="text-3xl font-bold">{title}</Text>
@@ -108,7 +112,6 @@ const HomeScreen = () => {
 
         <View className="pb-36">
           <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
-          {/* Dishes component goes here */}
           {dishes.map((dish) => (
             <DishRow
               key={dish._id}
