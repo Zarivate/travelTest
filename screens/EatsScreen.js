@@ -1,14 +1,20 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  ScrollView,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
 import { useDispatch, useSelector } from "react-redux";
-import NavFavourites from "../components/NavFavourites";
-import wcdonalds from "../assets/WcDonalds.jpg";
+import wcdonalds from "../assets/WcDonaldsLogo.jpg";
 import remy from "../assets/Remy.jpg";
-import kingMeat from "../assets/kingMeat";
-import angery from "../assets/Angery";
-import theRat from "../assets/theRat";
+import kingMeat from "../assets/kingMeat.png";
+import angery from "../assets/Angery.png";
+import theRat from "../assets/theRat.jpg";
 import bigW from "../assets/epic.jpg";
 import {
   ArrowLeftIcon,
@@ -56,6 +62,12 @@ const HomeScreen = () => {
       id: "161718",
       title: "Annette",
       image: angery,
+      screen: "EatsScreen",
+    },
+    {
+      id: "192021",
+      title: "Cursed",
+      image: theRat,
       screen: "EatsScreen",
     },
   ];
