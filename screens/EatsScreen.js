@@ -24,8 +24,10 @@ import {
   MapPinIcon,
   QuestionMarkCircleIcon,
 } from "react-native-heroicons/solid";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   const dispatch = useDispatch();
 
   const sampleData = [
@@ -113,6 +115,13 @@ const HomeScreen = () => {
                   source={data.image}
                   style={tw`w-full h-56 bg-gray-300 p-4`}
                 />
+                <TouchableOpacity
+                  onPress={navigation.goBack}
+                  className="absolute top-14 left-5 p-2 bg-gray-100 rounded-full"
+                >
+                  <ArrowLeftIcon size={20} color="#00CCBB" />
+                </TouchableOpacity>
+
                 <View style={tw`bg-white`}>
                   <View style={tw`px-4 pt-4`}>
                     <Text style={tw`text-3xl font-bold`}>{data.title}</Text>
